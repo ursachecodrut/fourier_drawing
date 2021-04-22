@@ -34,7 +34,7 @@ function draw() {
     line(prevx, prevy, x, y);
   }
   wave.unshift(y);
-  //comment
+  
 
 
   translate(170, 0);
