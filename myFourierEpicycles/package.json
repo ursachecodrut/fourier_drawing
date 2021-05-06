@@ -1,0 +1,60 @@
+{
+  "name": "myfourierepicycles.com",
+  "version": "1.0.0",
+  "description": "Draw your own fourier epicycles.",
+  "main": "index.js",
+  "engines": {
+    "node": "14.9.0"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "dropzone": "^5.7.2",
+    "express": "^4.17.1",
+    "helmet": "^4.4.1",
+    "mathjax": "^3.0.5",
+    "p5": "^1.1.9",
+    "svgo": "^1.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/runtime": "^7.11.2",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.1",
+    "dot-prop": "^5.2.0",
+    "express-static-gzip": "^2.0.7",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.5.0",
+    "npm-watch": "^0.6.0",
+    "style-loader": "^1.2.1",
+    "svg-url-loader": "^6.0.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "watch": {
+    "webpack": "src/js/**/*.js",
+    "css": "src/css/style.css",
+    "html": "src/index.html"
+  },
+  "scripts": {
+    "watch": "npm-watch",
+    "webpack": "webpack || exit 1",
+    "webpack-prod": "webpack --mode=production || exit 1",
+    "css": "cp src/css/dropzone.min.css dist/dropzone.min.css && cp src/css/style.css dist/style.css",
+    "html": "cp src/indexSrc.html dist/index.html",
+    "dev": "npm run webpack && npm run css",
+    "build": "npm run webpack-prod && npm run css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trozler/myFourierEpicycles.git"
+  },
+  "author": "Tony Rosler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trozler/myFourierEpicycles/issues"
+  },
+  "homepage": "https://github.com/trozler/myFourierEpicycles#readme"
+}
