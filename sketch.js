@@ -15,7 +15,7 @@ var dt = 1;
 
 function setup() {
 	createCanvas(1200, 700);
-	background(0, 0, 50);
+	background(32, 164, 100);
 
 	//initializa sliderul pentru viteza de desen
 	sliderDt = createSlider(0, 2, 1, 0.01);
@@ -28,7 +28,7 @@ function setup() {
 }
 
 function draw() {
-	background(0, 0, 50);
+	background(32, 164, 100);
 
 	if (isDrawing) {
 		//verificam daca userul deseneaza in interiorul canvasului
@@ -89,7 +89,7 @@ function draw() {
 	}
 
 	if (!isDrawing && isRunning) {
-		stroke(255, 0, 0, 255);
+		stroke(245, 186, 20, 255);
 		noFill();
 		strokeWeight(5);
 		beginShape();
@@ -107,9 +107,9 @@ function draw() {
 	textSize(20);
 	text('kMax = ' + max(0, nMax - 1), width / 2 + 200, height - 30);
 	text('dt = ' + dt, width / 2 + 200, height - 70);
-	textSize(15);
+	textSize(25);
 	textAlign(CENTER);
-	text('Draw by pressing left mouse button', width / 2, 0 + 30);
+	text('Desenati cu mouse-ul tinand apasat click stanga', width / 2, 0 + 30);
 
 	//realizeaza animatia cercurilor in functie de viteza stabilita
 	if (isRunning) {
